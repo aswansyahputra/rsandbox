@@ -1,0 +1,25 @@
+{
+  "name": "rsandbox container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "r.rterm.linux": "/usr/local/bin/radian",
+        "r.lsp.path": "/usr/local/bin/R"
+      },
+      "extensions": [
+        "REditorSupport.r",
+        "RDebugger.r-debugger",
+        "Alexander.errorLens",
+        "Gruntfuggly.todo-tree",
+        "binaryify.oneDarkPro",
+        "MiguelSolorio.Symbols"
+      ]
+    }
+  },
+  "postCreateCommand": "radian"
+}
