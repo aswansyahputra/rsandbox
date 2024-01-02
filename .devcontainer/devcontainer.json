@@ -1,0 +1,19 @@
+{
+    "name": "rsandbox container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "REditorSupport.r",
+                "Alexander.errorLens",
+                "Gruntfuggly.todo-tree",
+                "binaryify.oneDarkPro",
+                "MiguelSolorio.Symbols"
+            ]
+        }
+    },
+    "postCreateCommand": "radian"
+}
