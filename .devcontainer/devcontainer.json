@@ -8,8 +8,10 @@
     "vscode": {
       "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
+        "r.lsp.enabled": true,
+        "r.plot.useHttpgd": true,
         "r.rterm.linux": "/usr/local/bin/radian",
-        "r.lsp.path": "/usr/local/bin/R"
+        "r.session.emulateRStudioAPI": true
       },
       "extensions": [
         "REditorSupport.r",

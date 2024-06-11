@@ -11,8 +11,10 @@ RUN pip3 install radian
 RUN install2.r --error --skipinstalled --ncpus -1 \
   languageserver \
   httpgd \
+  styler \
   conflicted \
-  tidyverse
+  tidyverse \
+  shiny
 
 RUN installGithub.r MilesMcBain/breakerofchains lionel-/codegrip
 
