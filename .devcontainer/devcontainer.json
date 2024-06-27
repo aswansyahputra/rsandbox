@@ -1,27 +1,26 @@
 {
   "name": "rsandbox container",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": "."
-  },
+  "image": "ghcr.io/aswansyahputra/rsandbox",
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "r.alwaysUseActiveTerminal": true,
+        "r.bracketedPaste": true,
         "r.lsp.enabled": true,
         "r.plot.useHttpgd": true,
         "r.rterm.linux": "/usr/local/bin/radian",
-        "r.session.emulateRStudioAPI": true
+        "r.session.emulateRStudioAPI": true,
+        "r.plot.defaults.fullWindowMode": true
       },
       "extensions": [
-        "REditorSupport.r",
-        "RDebugger.r-debugger",
         "Alexander.errorLens",
-        "Gruntfuggly.todo-tree",
         "binaryify.oneDarkPro",
-        "MiguelSolorio.Symbols"
+        "Gruntfuggly.todo-tree",
+        "MiguelSolorio.Symbols",
+        "RDebugger.r-debugger",
+        "REditorSupport.r",
+        "Posit.shiny"
       ]
     }
-  },
-  "postCreateCommand": "radian"
+  }
 }
