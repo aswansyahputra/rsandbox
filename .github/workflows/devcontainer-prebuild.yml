@@ -5,6 +5,7 @@ on:
       - main
     paths:
       - '.devcontainer/**'
+  workflow_dispatch:
 
 jobs:
   prebuild:
