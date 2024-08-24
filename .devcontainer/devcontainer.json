@@ -15,9 +15,25 @@
     "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
       "packages": "tidyverse,dotenv,janitor,skimr,github::cynkra/constructive,github::dreamRs/prefixer,github::lionel-/codegrip,github::MilesMcBain/breakerofchains,github::MilesMcBain/datapasta",
       "installSystemRequirements": true
+    },
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "theme": "amuse",
+      "plugins": "git"
     }
   },
   "remoteEnv": {
     "PKG_SYSREQS": "true"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "christian-kohler.path-intellisense",
+        "dbankier.vscode-quick-select",
+        "Gruntfuggly.todo-tree",
+        "mhutchie.git-graph",
+        "RDebugger.r-debugger",
+        "usernamehw.errorlens"
+      ]
+    }
   }
 }
