@@ -13,16 +13,12 @@
       "pandocVersion": "auto"
     },
     "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-      "packages": "tidyverse,dotenv,janitor,skimr,github::cynkra/constructive,github::dreamRs/prefixer,github::lionel-/codegrip,github::MilesMcBain/breakerofchains,github::MilesMcBain/datapasta",
-      "installSystemRequirements": true
+      "packages": "languageserver,httpgd,jsonlite,lintr,github::cynkra/constructive,github::dreamRs/prefixer,github::lionel-/codegrip,github::MilesMcBain/breakerofchains"
     },
     "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
       "theme": "amuse",
       "plugins": "git"
     }
-  },
-  "remoteEnv": {
-    "PKG_SYSREQS": "true"
   },
   "customizations": {
     "vscode": {
@@ -33,7 +29,28 @@
         "mhutchie.git-graph",
         "RDebugger.r-debugger",
         "usernamehw.errorlens"
-      ]
+      ],
+      "settings": {
+        "r.alwaysUseActiveTerminal": false,
+        "r.bracketedPaste": true,
+        "r.lsp.debug": true,
+        "r.plot.defaults.fullWindowMode": true,
+        "r.plot.devArgs": {
+          "height": 500,
+          "width": 800
+        },
+        "r.plot.useHttpgd": true,
+        "r.removeLeadingComments": true,
+        "r.rterm.linux": "/usr/local/bin/radian",
+        "r.session.data.pageSize": 100,
+        "r.session.emulateRStudioAPI": true,
+        "r.source.echo": true,
+        "r.workspaceViewer.removeHiddenItems": true,
+        "r.workspaceViewer.showObjectSize": true
+      }
+    },
+    "remoteEnv": {
+      "PKG_SYSREQS": "true"
     }
   }
 }
