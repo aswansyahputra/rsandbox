@@ -1,4 +1,4 @@
-name: Pre-build rsandbox devcontainer
+name: Pre-build rstarter dev container
 on:
   push:
     branches:
@@ -26,6 +26,6 @@ jobs:
     - name: Pre-build dev container image
       uses: devcontainers/ci@v0.3
       with:
-        imageName: ghcr.io/aswansyahputra/rsandbox
-        cacheFrom: ghcr.io/aswansyahputra/rsandbox
+        imageName: ghcr.io/aswansyahputra/rstarter
+        cacheFrom: ghcr.io/aswansyahputra/rstarter
         push: always

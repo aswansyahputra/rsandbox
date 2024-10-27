@@ -1,5 +1,5 @@
 {
-  "name": "rsandbox",
+  "name": "rstarter",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
