@@ -2,22 +2,42 @@
   "name": "rstarter",
   "image": "mcr.microsoft.com/devcontainers/base:jammy",
   "features": {
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "setLocale": true,
+      "theme": "awesomepanda",
+      "plugins": "git",
+      "desiredLocale": "en_US.UTF-8 UTF-8"
+    },
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
       "installREnv": true,
       "installRMarkdown": true,
       "installRadian": true,
       "installVscDebugger": true,
-      "version": "4",
-      "pakVersion": "auto",
+      "version": "release",
+      "pakVersion": "stable",
       "vscodeRSupport": "full",
-      "pandocVersion": "auto"
+      "pandocVersion": "latest"
     },
     "ghcr.io/rocker-org/devcontainer-features/r-packages:1": {
-      "packages": "languageserver,httpgd,jsonlite,lintr,github::cynkra/constructive,github::dreamRs/prefixer,github::lionel-/codegrip,github::MilesMcBain/breakerofchains"
+      "installSystemRequirements": true,
+      "packages": "languageserver,httpgd,jsonlite,lintr,github::cynkra/constructive,github::dreamRs/prefixer,github::lionel-/codegrip,github::MilesMcBain/breakerofchains",
+      "pakVersion": "stable"
     },
-    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
-      "theme": "amuse",
-      "plugins": "git"
+    "ghcr.io/rocker-org/devcontainer-features/rstudio-server:0": {
+      "version": "stable",
+      "singleUser": "true"
+    }
+  },
+  "remoteEnv": {
+    "ZSH_DISABLE_COMPFIX": "true",
+    "PKG_SYSREQS": "true"
+  },
+  "forwardPorts": [
+    8787
+  ],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio IDE"
     }
   },
   "customizations": {
@@ -27,7 +47,6 @@
         "dbankier.vscode-quick-select",
         "Gruntfuggly.todo-tree",
         "mhutchie.git-graph",
-        "RDebugger.r-debugger",
         "usernamehw.errorlens"
       ],
       "settings": {
@@ -48,9 +67,6 @@
         "r.workspaceViewer.removeHiddenItems": true,
         "r.workspaceViewer.showObjectSize": true
       }
-    },
-    "remoteEnv": {
-      "PKG_SYSREQS": "true"
     }
   }
 }
