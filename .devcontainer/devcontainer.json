@@ -30,7 +30,8 @@
   },
   "remoteEnv": {
     "ZSH_DISABLE_COMPFIX": "true",
-    "PKG_SYSREQS": "true"
+    "PKG_SYSREQS": "true",
+    "TZ": "UTC"
   },
   "forwardPorts": [
     8787
